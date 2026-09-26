@@ -2,9 +2,42 @@
 
 > Изучение системы контроля версий **Git** и хостинга репозиториев **GitHub**
 
-<p align="center">
-  <img src="img\mem1.jpg" alt="мдэ" width="1049">
-</p>
+feat. - *https://t.me/this_neural_network/2058*
+<details open>
+<summary>▶</summary>
+<img src="img/comic/1.jpg" width="500">
+
+<details>
+<summary>▶</summary>
+<img src="img/comic/2.jpg" width="500">
+
+<details>
+<summary>▶</summary>
+<img src="img/comic/3.jpg" width="500">
+
+<details>
+<summary>▶</summary>
+<img src="img/comic/4.jpg" width="500">
+
+<details>
+<summary>▶</summary>
+<img src="img/comic/5.jpg" width="500">
+
+<details>
+<summary>▶</summary>
+<img src="img/comic/6.jpg" width="500">
+
+<details>
+<summary>▶</summary>
+<img src="img/comic/7.jpg" width="500">
+
+</details>
+</details>
+</details>
+</details>
+</details>
+</details>
+</details>
 
 ## 👤 Об авторе
 
