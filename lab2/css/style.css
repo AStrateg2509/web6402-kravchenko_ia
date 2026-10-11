@@ -1,0 +1,173 @@
+/* общее */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #eeeeee;
+  color: black;
+}
+
+#wrapper {
+  width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}
+
+p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+ul,
+ol {
+  margin: 0 0 10px 30px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+/* ссылки */
+a {
+  color: navy;
+}
+
+/* внешние ссылки */
+a[target="_blank"] {
+  color: maroon;
+  font-weight: bold;
+}
+
+a:hover {
+  color: red;
+}
+
+/* шапка */
+#header {
+  background-color: lightblue;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.logo {
+  width: 60px;
+  float: left;
+  margin-right: 15px;
+}
+
+h1 {
+  font-size: 1.8em;
+  line-height: 60px;
+  color: navy;
+}
+
+/* меню */
+nav {
+  padding: 8px 20px;
+  border-bottom: 1px solid #cccccc;
+}
+
+nav a {
+  text-decoration: underline;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* контент */
+main {
+  padding: 10px 20px 20px 20px;
+}
+
+h2 {
+  margin: 15px 0 10px 0;
+  color: navy;
+}
+
+/* первый абзац после заголовка */
+h2 + p {
+  text-indent: 20px;
+}
+
+.note {
+  font-size: 0.9em;
+  color: #666666;
+}
+
+/* фото на главной */
+.photo {
+  width: 400px;
+  border: 3px solid #cccccc;
+}
+
+/* список контактов */
+.contacts > li {
+  list-style-type: square;
+  margin-bottom: 8px;
+}
+
+/* таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 5px 8px;
+}
+
+th {
+  background-color: #cccccc;
+  text-align: center;
+}
+
+/* строки через одну */
+tr:nth-child(even) {
+  background-color: rgb(255, 255, 200);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.yes {
+  color: green;
+  font-weight: bold;
+}
+
+.no {
+  color: red;
+}
+
+/* подвал */
+footer {
+  font-size: 0.8em;
+  color: #666666;
+  text-align: center;
+  border-top: 1px solid #cccccc;
+  padding: 10px;
+}
