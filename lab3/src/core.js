@@ -80,7 +80,15 @@ function fibonacci(n) {
  * console.log(sumFn(5)) - 15
  * console.log(sumFn(3)) - 18
  */
-function getOperationFn(initialValue, operatorFn) {}
+function getOperationFn(initialValue, operatorFn) {
+    let stored = initialValue;
+    return function (newValue) {
+        // без operatorFn stored никто не меняет, так что это и есть initialValue
+        if (typeof operatorFn !== 'function') return stored;
+        stored = operatorFn(stored, newValue);
+        return stored;
+    };
+}
 
 /**
  * Напишите функцию создания генератора арифметической последовательности.
@@ -98,7 +106,15 @@ function getOperationFn(initialValue, operatorFn) {}
  * console.log(generator()); // 7
  * console.log(generator()); // 9
  */
-function sequence(start, step) {}
+function sequence(start = 0, step = 1) {
+    let current = start;
+    // "генератор" тут по смыслу, не function*: по примеру из ТЗ generator() сразу отдаёт число, а не {value, done}
+    return () => {
+        const value = current;
+        current += step;
+        return value;
+    };
+}
 
 /**
  * Напишите функцию deepEqual, которая принимает два значения
