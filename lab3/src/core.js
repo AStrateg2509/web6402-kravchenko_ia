@@ -130,7 +130,30 @@ function sequence(start = 0, step = 1) {
  * deepEqual({arr: [22, 33], text: 'text'}, {arr: [22, 33], text: 'text'}) // true
  * deepEqual({arr: [22, 33], text: 'text'}, {arr: [22, 3], text: 'text2'}) // false
  */
-function deepEqual(firstObject, secondObject) {}
+function deepEqual(firstObject, secondObject) {
+    if (firstObject === secondObject) return true;
+    // одинаковое значение = как в Set/Map (SameValueZero): NaN равен NaN, 0 равен -0
+    if (firstObject !== firstObject && secondObject !== secondObject)
+        return true;
+    if (
+        typeof firstObject !== 'object' ||
+        firstObject === null ||
+        typeof secondObject !== 'object' ||
+        secondObject === null
+    ) {
+        return false;
+    }
+    if (Array.isArray(firstObject) !== Array.isArray(secondObject))
+        return false;
+    const keysA = Object.keys(firstObject);
+    const keysB = Object.keys(secondObject);
+    if (keysA.length !== keysB.length) return false;
+    return keysA.every(
+        (key) =>
+            Object.prototype.hasOwnProperty.call(secondObject, key) &&
+            deepEqual(firstObject[key], secondObject[key])
+    );
+}
 
 module.exports = {
     isInteger,
