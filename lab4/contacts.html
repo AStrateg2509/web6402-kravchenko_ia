@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты — Клуб «Гильдия»</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <img src="images/meeple.svg" alt="Логотип клуба" class="masthead__logo">
+      <h1>Клуб настольных игр «Гильдия»</h1>
+    </header>
+    <nav class="menu">
+      <a href="index.html">Главная</a>
+      <a href="games.html">Игры</a>
+      <a href="schedule.html">Расписание</a>
+      <a href="contacts.html" aria-current="page">Контакты</a>
+    </nav>
+    <main>
+      <h2>Как с нами связаться</h2>
+      <p>
+        Информация о каждом игровом вечере публикуется <mark>в среду перед встречей</mark>
+        в нашей группе в Telegram.
+      </p>
+      <ul class="contacts">
+        <li>Группа в Telegram: <a href="https://t.me/GuildCat" target="_blank">t.me/GuildCat</a></li>
+        <li>E-mail: <a href="mailto:guild@example.com">guild@example.com</a></li>
+        <li>Время встреч: пятница 18:00–21:30, раз в две недели</li>
+      </ul>
+      <h2>Запись на игротеку</h2>
+      <form class="registration" action="/api/registrations" method="post">
+        <label>Имя <input name="name" autocomplete="given-name" maxlength="100" required></label>
+        <label>Почта <input type="email" name="email" autocomplete="email" required></label>
+        <label>Встреча
+          <select name="meeting" required>
+            <option value="">Выберите пятницу</option>
+            <option value="2026-12-04">4 декабря 2026</option>
+            <option value="2026-12-18">18 декабря 2026</option>
+          </select>
+        </label>
+        <label><input type="checkbox" name="accepted" required> Я ознакомился с правилами клуба</label>
+        <a href="schedule.html#rules" target="_blank">Прочитать правила клуба</a>
+        <button type="submit">Записаться</button>
+        <output role="status"></output>
+      </form>
+      <script src="registration.js" defer></script>
+    </main>
+    <footer>© 2026 Кравченко И.А., группа 6402-010302D</footer>
+  </div>
+</body>
+</html>
