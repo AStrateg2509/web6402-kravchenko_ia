@@ -58,3 +58,24 @@ footer { border-top: 1px solid var(--line); }
 @media (max-width: 42rem) {
   .intro { flex-direction: column; align-items: stretch; gap: .5rem; }
 }
+.registration { display: grid; gap: 1rem; max-width: 30rem; }
+.registration input:not([type="checkbox"]), .registration select {
+  display: block;
+  width: 100%;
+  padding: .6rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--green);
+}
+.registration button {
+  justify-self: start;
+  padding: .65rem 1.6rem;
+  font: inherit;
+  color: var(--card);
+  background: var(--green);
+  border: 0;
+  border-radius: .4rem;
+  cursor: pointer;
+}
+.registration output:empty { display: none; }
