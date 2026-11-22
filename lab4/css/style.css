@@ -1,0 +1,60 @@
+:root {
+  --paper: #faf5e9;
+  --card: #fffdf6;
+  --ink: #20392f;
+  --green: #245841;
+  --gold: #efc86f;
+  --line: #d8d1bc;
+  --rust: #934420;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 1rem/1.55 "Segoe UI", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+.page { max-width: 72rem; margin: auto; }
+.masthead, .menu, main, footer { padding: 1rem clamp(1rem, 4vw, 3rem); }
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--green);
+  color: var(--card);
+}
+.masthead__logo { width: 3.5rem; transform-origin: bottom center; }
+@media (prefers-reduced-motion: no-preference) {
+  .masthead__logo_lively { animation: hop 850ms ease-out; }
+}
+@keyframes hop {
+  20% { transform: scale(1.1, .9); }
+  48% { transform: translateY(-14px) rotate(-9deg); }
+  78% { transform: scale(1.08, .94); }
+  100% { transform: none; }
+}
+h1, h2, h3 { font-family: Georgia, serif; line-height: 1.15; }
+h1 { font-size: clamp(1.45rem, 4vw, 2.5rem); }
+h2 { font-size: 2rem; }
+.menu { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; border-bottom: 1px solid var(--line); }
+a { color: var(--green); }
+.menu [aria-current] { font-weight: bold; text-decoration-thickness: 3px; }
+.intro { display: flex; align-items: center; gap: 2rem; }
+.intro > * { flex: 1; min-width: 0; }
+.intro__figure { margin: 0; }
+.photo { width: 100%; display: block; border-radius: .5rem; }
+figcaption, footer, .note { font-size: .9em; }
+.catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
+.game, .registration { background: var(--card); border: 1px solid var(--line); border-radius: .6rem; padding: 1.25rem; }
+.game__title { margin: 0; font-size: 1.35rem; }
+.game dl { display: grid; grid-template-columns: 1fr auto; margin-bottom: 0; }
+.game dd { margin: 0; }
+.no { color: var(--rust); }
+.schedule { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+td, th { padding: .55rem; text-align: left; border-bottom: 1px solid var(--line); }
+th, mark { background: var(--gold); color: var(--ink); }
+footer { border-top: 1px solid var(--line); }
+@media (max-width: 42rem) {
+  .intro { flex-direction: column; align-items: stretch; gap: .5rem; }
+}
